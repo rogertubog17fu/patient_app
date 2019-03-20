@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>
+			Data Control System
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>  
+	<p>
+		{{message}}
+	</p>
+	<ng-container *ngIf = "show_button_generate_key">
+		<button ion-button color="primary" (click)="click_button()">Generate keys</button>
+	</ng-container>
+	<ng-container *ngIf = "show_button_store_key">
+		<button ion-button color="primary" (click)="store_keys()">Store keys</button>
+	</ng-container>
+	<ng-container *ngIf = "show_button_send_pk_to_hp">
+		<button ion-button color="primary" (click)="send_pk_to_hp()">Send public key to HP</button>
+	</ng-container>
+	<ng-container *ngIf = "show_button_get_master_key">
+		<button ion-button color="primary" (click)="get_generate_key()">Get master key from HP</button>
+	</ng-container>
+	<ng-container *ngIf = "show_button_get_chain">
+		<button ion-button color="primary" (click)="get_summary_chain()">Get summary chain from HP</button>
+	</ng-container>
+	<!-- <button ion-button color="primary" (click)="decrypt_master_key()">Decrypt master key</button>
+	<button ion-button color="primary" (click)="encrypt_master_key()">Encrypt master key</button> -->
+	<button ion-button color="primary" (click)="testing()">KDF</button> -->
+</ion-content>
